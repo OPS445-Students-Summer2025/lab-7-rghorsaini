@@ -11,6 +11,15 @@ class Time:
         self.minute = minute
         self.second = second
 
+    def __str__(self):
+        '''Used by print() and str()'''
+        return f'{self.hour:02d}:{self.minute:02d}:{self.second:02d}'
+
+    def __repr__(self):
+        '''Used by interpreter output'''
+        return f'{self.hour:02d}.{self.minute:02d}.{self.second:02d}'
+
+
     def format_time(self):
         return f'{self.hour:02d}:{self.minute:02d}:{self.second:02d}'
 
